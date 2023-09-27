@@ -16,12 +16,7 @@ public class test1 {
 
             boolean result = true;
 
-            String input = "ABCD";
-            if (input.equals("abcd")) {
-            	result = true; 
-            } else {
-            	result = false; 
-            }
+            result = "ABC" == "abc";
 
             System.out.println(result);
         
