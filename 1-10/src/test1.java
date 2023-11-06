@@ -38,18 +38,8 @@ public class test1 {
 
 		//問題4:この配列"numd"をコピーした配列名"new_numd"を作り"new_numd"の中身を出力してください。
 		int[] numd = { 1, 3, 5, 7, 9 };
-		int[] new_numd = new int[numd.length];
-		for (int i = 0; i < numd.length; i++) {
-			new_numd[i] = numd[i];
-		}
-		System.out.print("[");
-		for (int i = 0; i < new_numd.length; i++) {
-			System.out.print(new_numd[i]);
-			if (i < new_numd.length - 1) {
-				System.out.print(",");
-			}
-		}
-		System.out.println("]");
+		int[] new_numd = Arrays.copyOf(numd, numd.length);
+		System.out.println(Arrays.toString(new_numd));
 
 		//改行
 		System.out.println("問５");
@@ -57,33 +47,16 @@ public class test1 {
 		//問題5:この配列"nume"を昇順に並び替えて出力しなさい。
 		int[] nume = { 6, 2, 8, 1, 9 };
 		Arrays.sort(nume);
-		System.out.print("[");
-		for (int i = 0; i < nume.length; i++) {
-			System.out.print(nume[i]);
-			if (i < nume.length - 1) {
-				System.out.print(",");
-			}
-		}
-		System.out.println("]");
+		System.out.println(Arrays.toString(nume));
 
 		//改行
 		System.out.println("問６");
 
 		//問題6:配列"numf"に要素を1つ(10)追加した配列"new_numf"を作成し出力しなさい。
 		int[] numf = { 1, 3, 5, 7, 9 };
-		int[] new_numf = new int[numf.length + 1];
-		for (int i = 0; i < numf.length; i++) {
-			new_numf[i] = numf[i];
-		}
+		int[] new_numf = Arrays.copyOf(numf, numf.length + 1);
 		new_numf[new_numf.length - 1] = 10;
-		System.out.print("[");
-		for (int i = 0; i < new_numf.length; i++) {
-			System.out.print(new_numf[i]);
-			if (i < new_numf.length - 1) {
-				System.out.print(",");
-			}
-		}
-		System.out.println("]");
+		System.out.println(Arrays.toString(new_numf));
 
 		//改行
 		System.out.println("問７");
