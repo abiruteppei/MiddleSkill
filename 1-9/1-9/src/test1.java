@@ -14,10 +14,7 @@ public class test1 {
             
 			//3.boolean型の変数の値に不正な文字列比較を入れてfalseを出力してください。 
 
-            boolean result = true;
-
-            result = "ABC" == "abc";
-
+            boolean result = "ABC".equals("abc");
             System.out.println(result);
         
         }
